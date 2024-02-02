@@ -10,8 +10,8 @@
 #
 # Для каждой конечной точки необходимо проводить валидацию данных запроса и ответа.
 # Для этого использовать библиотеку Pydantic.
-from typing import Optional
 
+from typing import Optional
 from fastapi import FastAPI
 from pydantic import BaseModel
 from starlette.responses import JSONResponse
@@ -24,7 +24,7 @@ class Task(BaseModel):
     title: str
     description: str
     is_completed: Optional[bool] = False
-    is_deleted:  Optional[bool] = False
+    is_deleted: Optional[bool] = False
 
 
 tasks: list[Task] = []
